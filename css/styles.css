@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
 *{
-  margin:0;
-  padding: 0;
+  box-sizing: border-box;
 }
 body {
     font-family: 'Open Sans', sans-serif;
     background: #fff;
-   ;
+    color: #333;
     line-height: 1.6;
   }
   
@@ -43,10 +42,26 @@ header.hero{
     font-size: xx-large;
     
 }
+.navbar a {
+  color: #fff;
+  padding: 10px 20px;
+  margin: 0 5px;
+}
+
 .navbar{
-    display: flex;
-    justify-content: space-between;
-    padding-top: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #333;
+  color: #fff;
+  opacity: 0.8;
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  top: 0px;
+  padding: 0 30px;
+  transition: 0.5s ease-in;
+  z-index: 100;
 }
 li{
     display: inline; 
@@ -130,11 +145,7 @@ div.content{
   height: 100%;
 }
 
-.flex-columns img {
-  width: 50%;
-  height: 50%;
-  object-fit:contain;
-}
+
 
 .flex-columns .column .column-2{
   display: flex;
@@ -143,32 +154,43 @@ div.content{
   justify-content: center;
  
 }
-.column-1{
-    
+.flex-columns .column .column-1, .flex-columns .column .column-2 {
+  height: 100%;
+}
+.flex-columns img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-#jambo{
- 
-  text-align: right;
-  background-color: green;
-  height: 400px;
- 
-   
-   
-}
-div.column-text{
-   
-    float: right;
-    width:50%;
-    
+
+.btn-primary, .bg-primary {
+  background: #28a745;
+  color: #fff;
+  height: 600px;
+
   
 }
-.column-u{
-    width: 50%;
-    
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 30px;
+  color: #fff;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
 }
-#solutions{
-    width:100%;
+.btn-light, .bg-light {
+  background: #f4f4f4;
+  color: #333;
+}
+.bg-light h2{
+  width:90vh;
+  color: #333;
+   
+}
+section {
+  display: block;
 }
 
 .flex-columns .column .column-2 {
@@ -212,23 +234,179 @@ h4{
     object-fit:fill;
    
 }
-.column-z img  {
-    display: flex;
-    height: 70vh;
-    width: 900px;
-    object-fit:none;
 
-    
-    
+.flex-columns .row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
 }
-.column-z{
-  
-    float: right;
-    
-} 
-.column-21{
-   width:50%;
-   height:70vh;
-   background-color:rgb(76, 159, 219) ;
+.flex-columns .column .column-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 30px;
+}
+.flex-items {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  height: 80%;
+}
+.column-1{
+  width: 98vh;
+}
+
+.row{
+  display: flex;
+}
+.cases img {
+  width: 100%;
+}
+
+.cases img:hover {
+  opacity: 0.7;
+}
+
+/* team */
+.btn-secondary, .bg-secondary {
+  background: #0284d0;
+  color: #fff;
+}
+
+.team .flex-items .info-card h4 {
+  font-weight: 600;
+  font-size: 1.3rem;
+}
+
+.team .flex-items .info-card img {
+  border-radius: 50%;
+}
+
+/* Callback form */
+
+.contact h2 {
+  margin-bottom: 20px;
+}
+
+.callback-form {
+  width: 100%;
+}
+
+.callback-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.callback-form .form-control {
+  margin-bottom: 15px;
+}
+
+.callback-form input {
+  width: 100%;
+  padding: 4px;
+  height: 40px;
+  border: 1px solid #f5f5f5;
+}
+
+.callback-form input:focus {
+  outline-color: #28a745;
+  outline-style: solid; /* Needed to display for firefox browser */
+}
+
+.callback-form .btn {
+  padding: 12px 0;
+  margin-top: 20px;
+}
+input[type="text" i] {
+  padding: 1px 2px;
+}
+
+
+/* Blog Post  */
+.post {
+  padding: 50px 30px;
+}
+
+.post h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.post .meta {
+  margin-bottom: 30px;
+}
+
+.post img {
+  width: 300px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 30px;
+}
+
+/* footer */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+}
+.section-header {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.footer a {
+  color: #fff;
+}
+
+.footer a:hover {
+  color: #28a745;
+}
+
+.footer .social > * {
+  margin: 0 15px;
+}
+
+/* RESPONSIVE CHANGES */
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: 120px;
+    padding: 20px;
+  }
+
+  .navbar a {
+    padding: 10px 10px;
+    margin: 0 3px;
+  }
+
+  .flex-columns .column,
+  .flex-grid .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+
+  .team img {
+    width: 70%;
+  }
+
+  .hero.blog .content {
+    padding-top: 110px;
+  }
 }
 
