@@ -1,54 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap');
-*{
-  box-sizing: border-box;
-}
+
 body {
-    font-family: 'Open Sans', sans-serif;
-    background: #fff;
-    color: #333;
-    line-height: 1.6;
-  }
-  
-  a {
-    color: #333;
-    text-decoration: none;
- 
-  }
-  img{
-      
-      width: 600px;
-      height: 600px;
-      
-     
-      
-  }
-  h1,
-  h2 {
-    font-weight: 300;
-    line-height: 1.2;
-    color: white;
-    margin-left: 2rem;
-    margin-top: 2rem;
-  
-  }
-  
-  p {
-    margin: 10px 0;
-  }
-header.hero{
-    background-image: url('/images/home/showcase.jpg');
-    height: 100vh;
-    padding-left: 3rem;
-    font-size: xx-large;
-    
-}
-.navbar a {
-  color: #fff;
-  padding: 10px 20px;
-  margin: 0 5px;
+  font-family: 'Open Sans', sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
 }
 
-.navbar{
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+p {
+  margin: 10px 0;
+}
+
+/* Navbar */
+
+.navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -63,206 +39,110 @@ header.hero{
   transition: 0.5s ease-in;
   z-index: 100;
 }
-li{
-    display: inline; 
-    color: white;
-    
-    
-}
-nav ul li a{
-    list-style: none;
-     flex-wrap: wrap;
-   
-     
-    margin: 35px;
-    padding-right: 2rem;
-    text-align: center;
-    display: inline;
-    color:#fff;
-    font-size: 18px;
-}
-.text-primary{
-    color: green;
-}
-div.content{
-    color: white;
-    text-align: center;
-     padding-top: 9rem; 
-   align-content: space-between;
-  
-    font-size: 30px;
-    
-    
-    
 
-}   
-.hero .content .btn{
-    color: white;
-    border: green;
-    background-color: green;
-    border-radius: 12px;
-    padding-right: 10px;
-    padding-left: 10px;
-}
-#about{
-    margin-top: 3rem;
-    margin-right: 5em;
-    margin-bottom: 3rem;
-    margin-left: 3rem;
-    
-
-}
-.info-card{
-   
-    display:inline-block;
-    text-align:center;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 3rem;
-    border-radius: 50%;
-    position: relative;
-  
-   
-}
-.fa{
-    border-radius:50%;
-    height: 60px;
-    width: 60px;
-    background-color: green;
-    color: #fff;
-    padding-top: 5px;
-    
-   
+.navbar.top {
+  background: transparent;
+  z-index: 11;
 }
 
-.flex-columns .column .column-1,
-.flex-columns .column .column-2 {
-  height: 100%;
-
-}
-  .flex-columns .column .column-1,
-.flex-columns .column .column-2 {
-  height: 100%;
+.navbar .logo {
+  font-weight: 400;
+  font-size: 2rem;
 }
 
-
-
-.flex-columns .column .column-2{
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
- 
-}
-.flex-columns .column .column-1, .flex-columns .column .column-2 {
-  height: 100%;
-}
-.flex-columns img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-
-.btn-primary, .bg-primary {
-  background: #28a745;
+.navbar a {
   color: #fff;
-  height: 600px;
-
-  
+  padding: 10px 20px;
+  margin: 0 5px;
 }
-.btn {
-  cursor: pointer;
-  display: inline-block;
-  padding: 10px 30px;
+
+.navbar a:hover {
+  border-bottom: 2px solid #28a745;
+}
+
+.navbar ul {
+  display: flex;
+}
+
+/* header */
+
+.hero {
+  background: url('../images/home/showcase.jpg') no-repeat center center/cover;
+  height: 100vh;
+  position: relative;
   color: #fff;
-  background-color: #28a745;
-  border: none;
-  border-radius: 5px;
-}
-.btn-light, .bg-light {
-  background: #f4f4f4;
-  color: #333;
-}
-.bg-light h2{
-  width:90vh;
-  color: #333;
-   
-}
-section {
-  display: block;
 }
 
-.flex-columns .column .column-2 {
+.hero.blog {
+  background: url('../images/home/blog.jpg') no-repeat center center/cover;
+  height: 30vh;
+}
+
+.hero.blog .content {
+  padding-top: 60px;
+}
+
+.hero .content {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 30px;
-}
-.section-header{
-    text-align: center;
-    color: black;
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    font-weight:lighter;
-    font-size: 18px;;
-
-} 
-.change{
-    color: black;
-    font-size: 45px;;
-}
-h4{
-    font-weight:bold;
-    font-size: 20px;
-}
-.row-1{
-    display: flex;
-    
-}
-    
-.row-1 a{
-    padding: 5px 5px;
-    height:fit-content;
-    width: auto;
-    
-} 
-#blog{
-    display: inline;
-    margin: 4rem;
-    object-fit:fill;
-   
-}
-
-.flex-columns .row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-}
-.flex-columns .column .column-2 {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 30px;
-}
-.flex-items {
-  display: flex;
-  text-align: center;
   align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  height: 80%;
-}
-.column-1{
-  width: 98vh;
+  justify-content: center;
+  text-align: center;
+  padding: 0 20px;
 }
 
-.row{
-  display: flex;
+.hero .content h2 {
+  font-size: 3rem;
 }
+
+.hero .content p {
+  font-size: 1.5rem;
+  max-width: 600px;
+  margin: 20px 0 30px;
+}
+
+.hero:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: auto;
+}
+
+.hero .content * {
+  z-index: 10;
+}
+
+/* about info card containers */
+
+.info-card {
+  width: 400px;
+}
+
+.info-card i {
+  background-color: #28a745;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.info-card h3 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.info-card p {
+  font-size: 0.9rem;
+}
+
+/* cases */
+
 .cases img {
   width: 100%;
 }
@@ -272,10 +152,6 @@ h4{
 }
 
 /* team */
-.btn-secondary, .bg-secondary {
-  background: #0284d0;
-  color: #fff;
-}
 
 .team .flex-items .info-card h4 {
   font-weight: 600;
@@ -321,10 +197,6 @@ h4{
   padding: 12px 0;
   margin-top: 20px;
 }
-input[type="text" i] {
-  padding: 1px 2px;
-}
-
 
 /* Blog Post  */
 .post {
@@ -357,14 +229,6 @@ input[type="text" i] {
   justify-content: center;
   text-align: center;
   height: 200px;
-}
-.section-header {
-  padding: 30px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 }
 
 .footer a {
@@ -409,4 +273,3 @@ input[type="text" i] {
     padding-top: 110px;
   }
 }
-
